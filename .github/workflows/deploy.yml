@@ -1,8 +1,9 @@
-name: Deploy Nikola to GitHub Pages
+name: Deploy Nikola Site
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main  # Adjust to 'master' if your default branch is master
   workflow_dispatch:
 
 permissions:
@@ -18,25 +19,25 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout Source
         uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-          cache: "pip"
+          python-version: '3.11'
+          # cache: 'pip' removed to prevent missing requirements.txt error
 
-      - name: Install dependencies
+      - name: Install Nikola and Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install "Nikola[extras]"
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-      - name: Build site
-        run: nikola build
+      - name: Build Site
+        run: |
+          nikola build
 
-      - name: Upload Pages artifact
+      - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: output/
