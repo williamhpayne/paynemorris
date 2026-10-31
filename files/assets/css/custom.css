@@ -1,0 +1,17 @@
+/* Responsive sizing for the header graphic */
+#logo {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    /* Constrain maximum vertical height to fit cleanly in the header bar */
+    max-height: 64px;
+    vertical-align: middle;
+}
+
+/* Adjust height on smaller mobile displays */
+@media (max-width: 768px) {
+    #logo {
+        max-height: 48px;
+    }
+}
