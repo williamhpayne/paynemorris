@@ -15,3 +15,51 @@
         max-height: 48px;
     }
 }
+
+
+/* Align navigation container and swap brand/links positions */
+@media (min-width: 768px) {
+    /* Target the navbar flex container */
+    nav.navbar > .container,
+    nav.navbar > .container-fluid,
+    nav.navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Push the logo/brand to the far right */
+    .navbar-brand {
+        order: 2;
+        margin-left: auto;
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    /* Move the navigation links to the left */
+    #bs-navbar,
+    .navbar-collapse {
+        order: 1;
+        flex-grow: 0;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+}
+
+/* Ensure mobile viewports maintain balanced spacing */
+@media (max-width: 767px) {
+    nav.navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar-brand {
+        order: 2;
+        margin-right: 0;
+    }
+    .navbar-toggler {
+        order: 1;
+    }
+}
