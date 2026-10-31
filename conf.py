@@ -24,7 +24,7 @@ SITE_URL = "https://www.paynemorris.co.uk/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://www.paynemorris.co.uk/"
-BLOG_EMAIL = "william.payne@paynemorris.co.uk"
+BLOG_EMAIL = ""
 BLOG_DESCRIPTION = "British and European Covers - Historical Manuscripts"  # (translatable)
 
 # Nikola is multilingual!
