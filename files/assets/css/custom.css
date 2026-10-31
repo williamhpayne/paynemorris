@@ -144,23 +144,4 @@ nav.navbar > .container-fluid,
         margin-right: 0 !important;
     }
 }
-/* Pin logo directly to the top-right corner */
-nav.navbar,
-header,
-#header {
-    position: relative !important;
-}
 
-.navbar-brand {
-    position: absolute !important;
-    top: 10px !important;
-    right: 15px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    z-index: 1000 !important;
-}
-
-#logo {
-    max-height: 48px;
-    width: auto;
-}
