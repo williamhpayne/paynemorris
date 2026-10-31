@@ -63,3 +63,20 @@
         order: 1;
     }
 }
+/* Classical stationery header positioning */
+.header-container,
+#header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.5rem 1rem 1rem 0;
+    border-bottom: 1px solid #8B261E; /* Subtle vermilion separator rule */
+    margin-bottom: 1rem;
+}
+
+#logo {
+    display: block;
+    max-height: 58px;
+    width: auto;
+    margin-left: auto; /* Guarantees right alignment */
+}
