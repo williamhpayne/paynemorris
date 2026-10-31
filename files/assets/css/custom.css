@@ -96,3 +96,51 @@
     font-style: italic;
     color: #222222;
 }
+/* Force the navigation container to distribute elements and allow right-pinning */
+nav.navbar,
+nav.navbar > .container,
+nav.navbar > .container-fluid,
+.header-container {
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Push the logo anchor and container to the far right on ALL viewports */
+.navbar-brand,
+#brand {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    text-align: right !important;
+    display: inline-flex !important;
+    justify-content: flex-end !important;
+    order: 2 !important; /* Sits after menu or toggle buttons */
+}
+
+/* Ensure the image itself does not center within its bounding box */
+#logo {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    display: block !important;
+    float: right !important;
+}
+
+/* On mobile viewports, keep hamburger on the left and logo pinned to the right */
+@media (max-width: 767px) {
+    nav.navbar {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+
+    .navbar-toggler {
+        order: 1 !important;
+        margin-right: auto !important;
+        margin-left: 0 !important;
+    }
+
+    .navbar-brand {
+        order: 2 !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+}
