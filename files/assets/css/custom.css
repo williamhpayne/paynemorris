@@ -80,3 +80,19 @@
     width: auto;
     margin-left: auto; /* Guarantees right alignment */
 }
+/* Front-page business introductory statement */
+.business-intro {
+    max-width: 680px;
+    margin: 2rem auto 2.5rem auto;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #8B261E; /* Subtle vermilion accent rule */
+}
+
+.business-intro p.lead {
+    font-family: "Libre Caslon Text", "Caslon", serif;
+    font-size: 1.15rem;
+    line-height: 1.65;
+    font-style: italic;
+    color: #222222;
+}
