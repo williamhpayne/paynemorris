@@ -194,3 +194,28 @@ nav.navbar > .container-fluid,
         width: auto;
     }
 }
+/* Force the bootblog4 category bar to align items to the start (left) */
+.nav-scroller .nav {
+    display: flex !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+}
+
+/* Ensure clean typographic spacing between left-aligned links */
+.nav-scroller .nav a,
+.nav-scroller .nav-link {
+    display: inline-block !important;
+    padding-left: 0 !important;
+    padding-right: 1.75rem !important;
+    text-decoration: none;
+    font-family: "Libre Caslon Text", "Caslon", serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+}
+
+/* Optional: hover state consistent with 18th-century print styling */
+.nav-scroller .nav a:hover,
+.nav-scroller .nav-link:hover {
+    color: #8B261E !important; /* Deep vermilion / wax-seal red */
+    text-decoration: underline;
+}
