@@ -219,3 +219,29 @@ nav.navbar > .container-fluid,
     color: #8B261E !important; /* Deep vermilion / wax-seal red */
     text-decoration: underline;
 }
+/* Group all navbar items (navigation links AND languages) to the left on desktop */
+@media (min-width: 768px) {
+    /* Prevent the expanded nav container from occupying the far right */
+    #bs-navbar,
+    .navbar-collapse {
+        display: flex !important;
+        justify-content: flex-start !important;
+        flex-grow: 1 !important;
+        margin-right: 2rem !important; /* Buffer space before the logo */
+    }
+
+    /* Force both the main menu list and the translation list to the left */
+    #bs-navbar .navbar-nav,
+    .navbar-nav {
+        margin-left: 0 !important;
+        margin-right: 1.5rem !important;
+        float: none !important;
+    }
+
+    /* Keep language links distinct but compact */
+    .navbar-nav:last-child {
+        margin-left: 0 !important;
+        padding-left: 1rem;
+        border-left: 1px solid #ddd; /* Subtle separator rule between links and languages */
+    }
+}
